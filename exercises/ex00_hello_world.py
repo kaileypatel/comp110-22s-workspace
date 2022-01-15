@@ -1,3 +1,3 @@
-print("Hello to you, world.") 
+print("Hello to you, world.")
 
-__author__="730523395"
+_author_ = "730523395"
