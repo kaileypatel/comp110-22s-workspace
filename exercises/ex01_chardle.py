@@ -9,8 +9,10 @@ if len(GUESS) != int(5):
 
 
 GUESS2: str = input("Enter a single character: ")
+
+
 if len(GUESS2) != int(1):
-    exit("Error: Character must be a single character.")
+    exit("Error: Character must be a single character")
 else:
     print("Searching for " + GUESS2 + " in " + GUESS)
 
