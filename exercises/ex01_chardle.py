@@ -4,17 +4,17 @@ __author__ = "730523395"
 
 
 GUESS: str = input("Enter a 5-character word: ")
-if len(GUESS) != int(5):
-    exit("Error: Word must contain 5 characters")
 
+if len(GUESS) != int(5):
+    exit("Error: Word must contain 5 characters. ")
 
 GUESS2: str = input("Enter a single character: ")
 
-
 if len(GUESS2) != int(1):
-    exit("Error: Character must be a single character")
-else:
-    print("Searching for " + GUESS2 + " in " + GUESS)
+    exit("Error: Character must be a single character. ")
+
+
+print("Searching for " + GUESS2 + " in " + GUESS)
 
 
 count_word = 0
