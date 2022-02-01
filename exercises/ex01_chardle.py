@@ -41,4 +41,4 @@ if count_word > 1:
     print(count_word, "instances of " + GUESS2 + " found in " + GUESS)
 else:
     if count_word == 0: 
-        print("No instances of " + GUESS2 + " found in " + GUESS) 
+        print("No instances of " + GUESS2 + " found in " + GUESS)
