@@ -66,3 +66,16 @@ def main() -> None:
         print("X/6 - Sorry, try again tomorrow!")
     if __name__ == "__main__":
         main()
+
+        
+"""guess needs to be an empty string in order to call on imput_guess
+later on in the function's body"""
+"""I had trouble with the boolean and now I know 
+I need to restate the bool = False/True to force the 
+loop to quit"""
+"""Lastly, to call on a function means to literally 
+use how we called it in the termal and place that 
+call into the functions body"""
+"""These function calls can overlap where emojified
+includes input_guess(guess) and then the next line 
+print emojified literally aka boxes"""
