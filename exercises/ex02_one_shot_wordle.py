@@ -59,3 +59,4 @@ to True and if they arent and in this case B does not equal P, then bool or lett
 only with the guessed word and is at the end so the first word that is being dissected is python"""
 """As for the boxes, if the letter_count is true then there are yellow boxes signaling the letter
 is somewhere in python or the secret word and else means there is zero matches and turns to white boxes"""
+"""The last bit prints the boxes"""
