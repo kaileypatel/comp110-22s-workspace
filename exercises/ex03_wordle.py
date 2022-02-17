@@ -1,4 +1,4 @@
-""""6 Shot Wordle Exercise>"""
+"""6 Shot Wordle Exercise."""
 
 __author__ = "730523395"
 
@@ -23,7 +23,7 @@ def emojified(guess: str, secret: str) -> str:
     """Printing colored boxes correlating to the indexes."""
     assert len(guess) == len(secret) 
     counter: int = 0
-    boxes: str = ""
+    boxes: str = ""   # emoji output
     while counter < len(guess):
         if guess[counter] == secret[counter]:  
             boxes += GREEN_BOX
@@ -38,44 +38,36 @@ def emojified(guess: str, secret: str) -> str:
 def input_guess(length_number: int) -> str:
     """Ensuring the guess word is the proper number of characters."""
     att_guess: str = ""
-    att_guess = input(f"Enter a { length_number } character word: ")
+    att_guess = input(f"Enter a { length_number } character word: ")      # att_guess because attached to the length of the user's guess
     while length_number != len(att_guess):
         att_guess = input(f"That wasn't { length_number } chars! Try again: ")
-    return att_guess
+    return att_guess     # In the example, the code finishes with the guessed word
 
 
 def main() -> None:
     """The entrypoint of the program and main game loop."""
-    SECRET = "codes"
+    secret = "codes"
     turns: int = 0
-    won_game: bool = False
-    guess: str = ""
-    while (turns < 6) and won_game is False:
-        if guess != SECRET:
+    game: bool = False  # I had trouble with the boolean and now I know I need to restate the bool = False/True to force the loop to quit
+    new_guess: str = ""  # guess needs to be an empty string in order to call on imput_guess later on in the function's body
+    while (turns < 6) and game is False:
+        if new_guess != secret:
             turns += 1
             print(f"=== Turn {turns}/6 ===")
-            guess: str = input_guess(len(SECRET))
-            boxes: str = emojified(guess, SECRET)
+            new_guess = input_guess(len(secret))   # Lastly, to call on a function means to literally use how we called it in the termal and place that call into the functions body
+            boxes: str = emojified(new_guess, secret)   # These function calls can overlap where emojified includes input_guess(guess) and then the next line print emojified literally aka boxes
+
             print(boxes)
         else:
-            won_game: bool = True
+            game = True
     
-    if won_game:
-        print(f"You won in { turns }/6 turns!")
+    if game:
+        print(f"You won in {turns}/6 turns!")
     else:
         print("X/6 - Sorry, try again tomorrow!")
-    if __name__ == "__main__":
-        main()
 
-        
-"""guess needs to be an empty string in order to call on imput_guess
-later on in the function's body"""
-"""I had trouble with the boolean and now I know 
-I need to restate the bool = False/True to force the 
-loop to quit"""
-"""Lastly, to call on a function means to literally 
-use how we called it in the termal and place that 
-call into the functions body"""
-"""These function calls can overlap where emojified
-includes input_guess(guess) and then the next line 
-print emojified literally aka boxes"""
+  
+if __name__ == "__main__":
+    main()
+
+# python -m tools.submission exercises/ex03_wordle.py to save to a file!
