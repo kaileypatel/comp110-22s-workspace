@@ -28,8 +28,8 @@ def main() -> None:
     boat_three(final_pic, -50, -136, 10)
     boat_cover(final_pic, -47, -103, 10)
     x = 100
-    y = 250
-    i: int = 0 
+    y = 250 
+    i = 0
     while i < 2:
         starry_sky(final_pic, x, y)
         x += -50 
@@ -47,7 +47,7 @@ def starry_sky(star: Turtle, x: float, y: float) -> None:
     colormode(255)
     star.color(244, 144, 216)
     side_length: int = 40
-    i: int = 0
+    i = 0
     while i < 15: 
         star.forward(side_length * 0.97)
         star.left(550)
@@ -64,7 +64,7 @@ def mountain_land(a_mountain: Turtle, x: float, y: float, width: float) -> None:
     a_mountain.color(38, 168, 12)
     a_mountain.fillcolor(9, 86, 28)
     a_mountain.begin_fill()
-    i: int = 0 
+    i = 0 
     while i < 3: 
         a_mountain.forward(150)
         a_mountain.left(120)
@@ -130,7 +130,7 @@ def boat_one(left_piece: Turtle, x: float, y: float, width: float) -> None:
     colormode(255)
     left_piece.color(81, 62, 56)
     left_piece.begin_fill()
-    i: int = 0
+    i = 0
     while i < 3:
         left_piece.forward(25)
         left_piece.left(120)
@@ -145,7 +145,7 @@ def boat_two(right_piece: Turtle, x: float, y: float, width: float) -> None:
     right_piece.pendown()
     right_piece.setheading(-90.0)
     right_piece.begin_fill()
-    i: int = 0
+    i = 0
     while i < 3:
         right_piece.forward(25)
         right_piece.left(120)

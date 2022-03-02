@@ -46,7 +46,7 @@ def input_guess(length_number: int) -> str:
 
 def main() -> None:
     """The entrypoint of the program and main game loop."""
-    secret = "codes"
+    secret = "code"
     turns: int = 0
     game: bool = False  # I had trouble with the boolean and now I know I need to restate the bool = False/True to force the loop to quit
     new_guess: str = ""  # guess needs to be an empty string in order to call on imput_guess later on in the function's body
